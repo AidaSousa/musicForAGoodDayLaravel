@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\SongController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\SessionsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,26 +15,44 @@ use App\Http\Controllers\SongController;
 |
 */
 
-//Establecemos la vista principal(home)
+// Establecemos la vista principal(home)
 Route::get('/', function() {
-    return view('layout');
-});
-
-Route::get('/home', function () {
     return view('home');
-});
+})->middleware('auth');
+
 
 Route::get('/edit', function () {
     return view('edit');
 });
 
 //Esto define y genera todas las rutas del crud(podeis ver todas las rutas con el comando php artisan route:list)
-Route::resource('songs', SongController::class);
+// Route::resource('songs', SongController::class);
 
-Route::get('login', [AuthController::class, 'index'])->name('login');
-Route::post('post-login', [AuthController::class, 'postLogin'])->name('login.post'); 
-Route::get('registration', [AuthController::class, 'registration'])->name('register');
-Route::post('index', [AuthController::class, 'index'])->name('index.post'); 
-Route::post('post-registration', [AuthController::class, 'postRegistration'])->name('register.post'); 
-Route::get('dashboard', [AuthController::class, 'dashboard']); 
-Route::get('logout', [AuthController::class, 'logout'])->name('logout');
+Route::get('/register', [RegisterController::class, 'create'])
+    ->middleware('guest')
+    ->name('register.index');
+
+Route::post('/register', [RegisterController::class, 'store'])
+    ->name('register.store');
+
+Route::get('/login', [SessionsController::class, 'create'])
+    ->middleware('guest')
+    ->name('login.index');
+
+Route::post('/login', [SessionsController::class, 'store'])
+    ->name('login.store');
+
+Route::get('/logout', [SessionsController::class, 'destroy'])
+    ->middleware('auth')
+    ->name('login.destroy');
+
+Route::get('/index', [SongController::class, 'index'])->name('song.index');
+Route::get('/create', [SongController::class, 'create'])->name('song.create');
+Route::get('/store', [SongController::class, 'store'])->name('song.store');
+Route::post('/store', [SongController::class, 'store'])->name('song.store');
+Route::get('/edit', [SongController::class, 'edit'])->name('song.edit');
+Route::get('/show', [SongController::class, 'show'])->name('song.show');
+Route::get('destroy/{id}', [SongController::class, 'destroy'])->name('song.destroy');
+// Route::delete('/song/{song}', [SongController::class, 'destroy'])->name('song.destroy');
+
+

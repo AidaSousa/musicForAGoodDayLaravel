@@ -22,8 +22,8 @@ class User extends Authenticatable
         'name',
         'email',
         'username',
-        'password',
         'user_type',
+        'password',
     ];
 
     /**
@@ -50,8 +50,4 @@ class User extends Authenticatable
         $this->attributes['password'] = bcrypt($value);
     }
 
-    public function role()
-    {
-        return $this->belongsTo(Role::class);
-    }
 }

@@ -20,11 +20,12 @@ return new class extends Migration
             $table->string('artist');
             $table->string('gender');
             $table->string('youtube');
-            $table->string('image');
+            $table->string('image',)->nullable();
             $table->enum('listened',['yes','no'])->default('no');
 
 
         });
+
     }
 
     /**
@@ -33,5 +34,6 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('songs');
+
     }
 };
