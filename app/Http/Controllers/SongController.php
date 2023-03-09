@@ -61,7 +61,7 @@ class SongController extends Controller
     public function edit(Song $song)
     //Mostramos un formulario para que el usuario pueda editar una canción existente (el parámetro $song es una instancia del modelo Song que se pasará a la vista songs.edit)
     {
-        return view('songs.edit', compact('songs'));
+        return view('song.edit', compact('songs'));
     }
 
     public function update(Request $request, Song $song)
@@ -97,3 +97,4 @@ class SongController extends Controller
         // return redirect()->route('songs.index')->with('success', 'Song deleted successfully!');
     }
 }
+
