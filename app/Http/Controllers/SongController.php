@@ -61,12 +61,13 @@ class SongController extends Controller
     public function edit(Song $song)
     //Mostramos un formulario para que el usuario pueda editar una canción existente (el parámetro $song es una instancia del modelo Song que se pasará a la vista songs.edit)
     {
-        return view('song.edit', compact('songs'));
+        return view('song.edit');
     }
 
-    public function update(Request $request, Song $song)
+    public function update(Request $request, $id)
     //Actualizamos una canción existente en la base de datos. La función recibe los datos enviados desde el formulario de edit  y actualiza las propiedades correspondientes del modelo Song. Guarda los cambios en la base de datos y redirige al usuario a songs.index con un mensaje de exito
     {
+        $song = Song::findOrFail($id);
         $song->song = $request->song;
         $song->artist = $request->artist;
         $song->gender = $request->gender;
@@ -74,7 +75,7 @@ class SongController extends Controller
         $song->image = $request->image;
         $song->listened = $request->listened;
         $song->save();
-        return redirect()->route('songs.index')->with('success', 'Song updated successfully!');
+        return redirect()->route('song.index')->with('success', 'Song updated successfully!');
     }
 
     public function destroy($id)

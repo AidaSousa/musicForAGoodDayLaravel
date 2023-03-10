@@ -8,50 +8,37 @@
 </head>
 <body>
 @section('content')
-  <div class="cotainer">
-      <div class="row justify-content-center">
-          <div class="col-md-8">
-              <div class="card">
-                  <div class="card-header">
-                    Upload your own songs
-                  </div>
-                    <div class="card-body">
-                      <form  method="POST">    
-                        <div class="modal-body">
-                          <div class="tile">
-                            <div class="tile-body">
-                              <form id="formRol" name="formRol">
-                                <input type="hidden" id="idRol" name="idRol" value="">
-                                  <div class="form-group">
-                                    <input class="form-control" id="txtNombre" name="txtNombre" type="text" placeholder="Song's name">
-                                    <input class="form-control" id="txtNombre" name="txtNombre" type="text" placeholder="Artist">
-                                    <input class="form-control" id="txtNombre" name="txtNombre" type="text" placeholder="Song's gender">
-                                    <input class="form-control" id="txtNombre" name="txtNombre" type="text" placeholder="Your name">
-                                    <input class="form-control" id="txtNombre" name="txtNombre" type="text" placeholder="Youtube URL">
-                                  </div>
-                                    <div class="tile-footer">
-                                      <button id="btnActionForm" class="btn btn-primary btn-custom" type="submit"><i class="fa fa-fw fa-lg fa-check-circle"></i><span id="btnText">Done!</span></button>&nbsp;&nbsp;&nbsp;
-                                    </div>
-                              </form>
-                              <input class="form-control" id="txtNombre" name="txtNombre" type="text" placeholder="Fake buscador">
-                              <div class="checkbox">
-                                <label>
-                                  <input type="checkbox" name="played-songs"> Played songs
-                                </label>
-                              </div>
-                              <div class="checkbox">
-                                <label>
-                                  <input type="checkbox" name="unplayed-songs"> Unplayed songs
-                                </label>
-                              </div>
-                            </div>  
-                          </div>
-                      </div>
-                  </div>
-                </div>
-             </div>
-          </div>
-      </div>
-</div>
-
+    <div class="container d-flex justify-content-md-center">
+        <div class="w-75 p-3 overflow-hidden" style="min-height: 540px; max-height:540px; background-color: #eee; border-radius: 1em; overflow:scroll;">
+        <h4 class="text-primary text-center mb-3">Insert your own song</h4>
+        <!-- Formulario -->
+        <form action="{{ route('song.store') }}" method="POST" enctype="multipart/form-data" class="d-flex justify-content-around text-primary mb-3">
+            @csrf
+            <div class="form-group">
+                <label for="song">Song's name:</label>
+                <input id="song" name="song" type="text" class="form-control">
+                <label for="youtube">Youtube URL:</label>
+                <input id="youtube" name="youtube" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="artist">Artist:</label>
+                <input id="artist" name="artist" type="text" class="form-control">
+                <label for="image">Image:</label>
+                <input type="file" class="form-control" id="image" name="image">
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <input id="gender" name="gender" type="text" class="form-control">
+                <button type="submit" class="btn btn-primary m-4 p-2">Add</button>
+            </div>
+        </form>
+        <div class="container d-flex justify-content-md-center">
+            <a href="{{ route('song.index') }}" class="btn btn-primary" style="background-color: blue;">See all songs</a>
+        </div>
+    </div>
+    </div>
 @endsection
+
+
+</body>
+</html>

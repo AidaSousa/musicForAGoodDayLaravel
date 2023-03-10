@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,6 +9,7 @@
     
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style type="text/css">
         @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
   
@@ -95,6 +97,34 @@
     color: white;
     text-align: center;
     }
+
+    .modal-content {
+        color: #2E315B;
+        background-color: #D9D9D9;
+    }
+    .btn-primary{
+        background-color:#f9471C;
+    }
+    .btn-primary:hover{
+        background-color: #F9471C;
+    }
+    .form-control{
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
