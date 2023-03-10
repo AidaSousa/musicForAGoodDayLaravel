@@ -26,7 +26,9 @@
       <br/>
       <a href=" {{ $item->youtube }}" target="_blank" class="btn btn-primary mb-1">▶</a>
       @if ($item->user_id == Auth::user()->id)
-      <a href="" class="btn btn-success mb-1">✎</a>
+      <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModalCenter">
+      ✎
+      </button>
       <a href="{{ route('song.destroy', $item->id) }}" class="btn btn-danger mb-1" onclick="return deleteSong('Are you sure you want to delete this song?')">X</a>
       @endif
       <script>
@@ -44,6 +46,38 @@
   </div>
 </div>
 @endsection
+@section('modalBootstrap')
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModalCenter">
+  E
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+        <form action="{{ route('song.store') }}" method="POST">
+            <div class="modal-body" id="formEditarSong">
+                    <input class="form-control" id="e-Song" name="txtNombre" type="text" placeholder="Song's name">
+                    <input class="form-control" id="e-Artist" name="txtNombre" type="text" placeholder="Artist">
+                    <input class="form-control" id="e-Gender" name="txtNombre" type="text" placeholder="Song's gender">
+                    <input class="form-control" id="e-Youtube" name="txtNombre" type="text" placeholder="Youtube URL">
+            </div>
+        </form>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" class="modalButton">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+  @endsection
 
 </body>
 </html>
