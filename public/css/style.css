@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.body{
+    margin: 0;
+    font-size: .9rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: white;
+    text-align: left;
+    background:url('/img/finalbackground.jpg');
+    background-position: center;
+    background-size: cover; 
+    background-repeat: cover no-repeat;
+}
+
+.navbar{
+    color: white;
+}
+.navbar-laravel
+{
+    box-shadow: 0 2px 4px rgba(0,0,0,.04);
+    color: white;
+}
+
+.navbar-brand{
+    width: 12%;
+}
+
+.navbar-brand , .nav-link, .my-form, .login-form
+{
+    font-family: 'Roboto';
+    color: white;
+    
+}
+
+.card{
+    color: #2E315B;
+    background-color: #D9D9D9;
+}
+.my-form
+{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+.my-form .row
+{
+    margin-left: 0;
+    margin-right: 0;
+}
+.login-form
+{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+.login-form .row
+{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.btn-custom {
+    background-color: #2E315B;
+    border-color: #2E315B;
+}
+
+.containerFooter {
+display: block;
+position: fixed;
+width: 100vw;
+bottom: 20px;
+}
+
+#textFooter {
+font-family: 'Consolas';
+color: white;
+text-align: center;
+}
+
+.modal-content {
+color: #2E315B;
+background-color: #D9D9D9;
+}
+
+.form-control{
+margin-top: 1.5rem;
+margin-bottom: 1.5rem;
+}
+
+/* Vista de canciones */
+.float-center {
+    margin-left: 42em;
+    margin-top: 1em;
+    width: 45em;
+    height: 12em;
+    background-color:#D9D9D9;
+}
+
+
+
+.d-block {
+    margin-top: 0.3em;
+    width:163px;
+    height:163px;
+}
+
+.play{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+.youtube {
+    border-radius: 50px; 
+    width: 4em; 
+    background-color: #8252bd;
+}
+
+.youtube:hover {
+    background-color: #4c3c99;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.options{
+    width: 25px;
+}
+
+.options:hover {
+    background-color: #8252bd;
+}
+
+.listen {
+    display: inline;
+}
+
+.btn-xs{
+    border:none; 
+    background-color:#D9D9D9;
+}
+
+.btn-xs:hover {
+    background-color: #8252bd;
+}
+
+.page-link {
+    background-color: #D9D9D9;
+    color: black;
+}
+
+.listened-song {
+    font-family: 'Roboto';
+    color: white;
+    height: 2.5em;
+    border: 5px, solid, transparent;
+    -moz-border-image: -moz-linear-gradient(top, #a13ad5 0%, #3a4ed5 100%);
+    -webkit-border-image: -webkit-linear-gradient(top, #a13ad5 0%, #3a4ed5 100%);
+    border-image: linear-gradient(to bottom, #a93ad5 0%, #3a4ed5 100%);
+    border-image-slice: 1;
+    background-color: #8252bd;
+}
+
+.listened-song:hover {
+    background-color: #4c3c99;
+    color: #D9D9D9;
+}
+
+/* Buscador */
+
+.search-i {
+    border: 5px, solid, transparent;
+    -moz-border-image: -moz-linear-gradient(top, #a13ad5 0%, #3a4ed5 100%);
+    -webkit-border-image: -webkit-linear-gradient(top, #a13ad5 0%, #3a4ed5 100%);
+    border-image: linear-gradient(to bottom, #a93ad5 0%, #3a4ed5 100%);
+    border-image-slice: 1;
+}
+
+.search-b {
+    background-color:  #8252bd  ;
+    border: 5px, solid, transparent;
+    -moz-border-image: -moz-linear-gradient(top, #a13ad5 0%, #3a4ed5 100%);
+    -webkit-border-image: -webkit-linear-gradient(top, #a13ad5 0%, #3a4ed5 100%);
+    border-image: linear-gradient(to bottom, #a93ad5 0%, #3a4ed5 100%);
+    border-image-slice: 1;
+}
+
+.search-b:hover {
+    background-color: #4c3c99;
+}
+
+/* Formulario canciones */
+.form-song {
+    margin-top: 5em;
+    background: rgba(221, 213, 213, 0.73);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+}
+
+.insert {
+    font-size: 3em;
+    color: #4c3c99;
+}
+
+.input-song {
+    width: 15em;
+    height: 2.5em;
+    margin: 2em;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;;
+    padding: 0 4px 0 4px;
+    border: 5px, solid, transparent;
+    -moz-border-image: -moz-linear-gradient(top, #a13ad5 0%, #3a4ed5 100%);
+    -webkit-border-image: -webkit-linear-gradient(top, #a13ad5 0%, #3a4ed5 100%);
+    border-image: linear-gradient(to bottom, #a93ad5 0%, #3a4ed5 100%);
+    border-image-slice: 1;
+}
+
+.add {
+    background-color:#8252bd;
+    width: 10em;
+    border: 5px, solid, transparent;
+    -moz-border-image: -moz-linear-gradient(top, #a13ad5 0%, #3a4ed5 100%);
+    -webkit-border-image: -webkit-linear-gradient(top, #a13ad5 0%, #3a4ed5 100%);
+    border-image: linear-gradient(to bottom, #a93ad5 0%, #3a4ed5 100%);
+    border-image-slice: 1;
+}
+
+.add:hover {
+    background-color: #4c3c99;
+}
+
+.all-song {
+    margin-right: 5em;
+    background-color: #8252bd;
+    border: 5px, solid, transparent;
+    -moz-border-image: -moz-linear-gradient(top, #a13ad5 0%, #3a4ed5 100%);
+    -webkit-border-image: -webkit-linear-gradient(top, #a13ad5 0%, #3a4ed5 100%);
+    border-image: linear-gradient(to bottom, #a93ad5 0%, #3a4ed5 100%);
+    border-image-slice: 1;
+}
+
+.all-song:hover {
+    background-color: #4c3c99;
+}
+
+.all-songg {
+    font-family: 'Roboto';
+    color: white;
+    height: 2.5em;
+    border: 5px, solid, transparent;
+    -moz-border-image: -moz-linear-gradient(top, #a13ad5 0%, #3a4ed5 100%);
+    -webkit-border-image: -webkit-linear-gradient(top, #a13ad5 0%, #3a4ed5 100%);
+    border-image: linear-gradient(to bottom, #a93ad5 0%, #3a4ed5 100%);
+    border-image-slice: 1;
+    background-color: #8252bd;
+}
+
+.all-songg:hover {
+    background-color: #4c3c99;
+    color: #D9D9D9;
+}
+
+.listend-song {
+    background-color: #8252bd;
+    border: 5px, solid, transparent;
+    -moz-border-image: -moz-linear-gradient(top, #a13ad5 0%, #3a4ed5 100%);
+    -webkit-border-image: -webkit-linear-gradient(top, #a13ad5 0%, #3a4ed5 100%);
+    border-image: linear-gradient(to bottom, #a93ad5 0%, #3a4ed5 100%);
+    border-image-slice: 1;
+}
+
+.listend-song:hover {
+    background-color: #4c3c99;
+}
+
+/* Formulario login */
+
+.container-login {
+    width: 70em;
+    margin-top: 5em;
+    margin-left: 30em;
+    
+}
+
+.card-login {
+    background: rgba(221, 213, 213, 0.73);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+}
+
+.header-login {
+    font-family: 'Roboto';
+    text-align: center;
+    font-weight: bold;
+}
+
+.login {
+    margin-left: 9em;
+    border: 5px, solid, transparent;
+    -moz-border-image: -moz-linear-gradient(top, #a13ad5 0%, #3a4ed5 100%);
+    -webkit-border-image: -webkit-linear-gradient(top, #a13ad5 0%, #3a4ed5 100%);
+    border-image: linear-gradient(to bottom, #a93ad5 0%, #3a4ed5 100%);
+    border-image-slice: 1;
+}
+
+.btn-login {
+    width: 10em;
+    background-color: #8252bd;
+    border: 5px, solid, transparent;
+    -moz-border-image: -moz-linear-gradient(top, #a13ad5 0%, #3a4ed5 100%);
+    -webkit-border-image: -webkit-linear-gradient(top, #a13ad5 0%, #3a4ed5 100%);
+    border-image: linear-gradient(to bottom, #a93ad5 0%, #3a4ed5 100%);
+    border-image-slice: 1;
+}
+
+.btn-login:hover{
+    background-color: #4c3c99;
+}
+
+/* Registro */
+
+.container-register{
+    width: 70em;
+    margin-top: 0em;
+    margin-left: 30em;
+}
+
+.card-register {
+    background: rgba(221, 213, 213, 0.73);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+}
+
+.header-register {
+    font-family: 'Roboto';
+    text-align: center;
+    font-weight: bold;
+}
+
+.register {
+    width: 30em;
+    margin-left: 5em;
+    border: 5px, solid, transparent;
+    -moz-border-image: -moz-linear-gradient(top, #a13ad5 0%, #3a4ed5 100%);
+    -webkit-border-image: -webkit-linear-gradient(top, #a13ad5 0%, #3a4ed5 100%);
+    border-image: linear-gradient(to bottom, #a93ad5 0%, #3a4ed5 100%);
+    border-image-slice: 1;
+}
+
+.btn-register {
+    width: 10em;
+    background-color: #8252bd;
+    border: 5px, solid, transparent;
+    -moz-border-image: -moz-linear-gradient(top, #a13ad5 0%, #3a4ed5 100%);
+    -webkit-border-image: -webkit-linear-gradient(top, #a13ad5 0%, #3a4ed5 100%);
+    border-image: linear-gradient(to bottom, #a93ad5 0%, #3a4ed5 100%);
+    border-image-slice: 1;
+}
+
+.btn-register:hover {
+    background-color: #4c3c99;
+}
+
+.result {
+    background-color: #D9D9D9;
+    width: 75%;
+    margin-left: 17em;
+    margin-top: 2em;
+}
+
+.text-result {
+    margin-left: 23em;
+    color: #4c3c99;
+}
+
+.result-text {
+    margin-left: 27em;
+
+}
